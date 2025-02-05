@@ -1,0 +1,134 @@
+/*
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ Rafael Soley Robles                                                     │
+  │ v1.0.0                                                                  │
+  │                                                                         │
+  │ Limited Source Software, see LICENSE.                                   │
+  │ © All rights reserved.                                                  │
+  │                                                                         │
+  │ The above copyright notice and this permission shall be included in all │
+  │ copies or substantial portions of the Software.                         │
+  └─────────────────────────────────────────────────────────────────────────┘
+ */
+
+@import "tailwindcss";
+/* @config "../tailwind.config.js"; */
+@plugin "tailwindcss-animated";
+@plugin "tailwind-scrollbar-hide";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/container-queries";
+@plugin "@tailwindcss/forms";
+@theme {
+  /* Font Families */
+  --font-sans: "Inter", "ui-sans-serif", "system-ui", "sans-serif",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Font Sizes */
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 22px;
+  --text-big: 90px;
+  --text-big--line-height: 1.1;
+
+  /* Border Radius */
+  --radius-default: 1rem;
+
+  /* Colors */
+  --color-agray-50: #f7f7f7;
+  --color-agray-100: #e0e0e0;
+  --color-agray-200: #b3b3b3;
+  --color-agray-300: #8c8c8c;
+  --color-agray-400: #666666;
+  --color-agray-500: #404040;
+  --color-agray-600: #2b2b2b;
+  --color-agray-700: #191919;
+  --color-agray-800: #121212;
+  --color-agray-900: #0b0b0b;
+  --color-agray-950: #090909;
+
+  --color-ablue-50: #d4e6f1;
+  --color-ablue-100: #a9c9e3;
+  --color-ablue-200: #7fafd5;
+  --color-ablue-300: #56a4c7;
+  --color-ablue-400: #2c99b9;
+  --color-ablue-500: #018fa9;
+  --color-ablue-600: #017c96;
+  --color-ablue-700: #016c84;
+  --color-ablue-800: #015b72;
+  --color-ablue-900: #014b60;
+  --color-ablue-950: #013a4e;
+
+  --color-awhite-50: #ffffff;
+  --color-awhite-100: #f4f4f4;
+  --color-awhite-200: #e9e9e9;
+  --color-awhite-300: #dedede;
+  --color-awhite-400: #d3d3d3;
+  --color-awhite-500: #c8c8c8;
+  --color-awhite-600: #bcbcbc;
+  --color-awhite-700: #b0b0b0;
+  --color-awhite-800: #a5a5a5;
+  --color-awhite-900: #999999;
+  --color-awhite-950: #8c8c8c;
+
+  --color-ared-50: #f8d6d6;
+  --color-ared-100: #f1a5a5;
+  --color-ared-200: #e77474;
+  --color-ared-300: #e04343;
+  --color-ared-400: #d81111;
+  --color-ared-500: #c40000;
+  --color-ared-600: #9e0000;
+  --color-ared-700: #7d0000;
+  --color-ared-800: #5d0000;
+  --color-ared-900: #3e0000;
+  --color-ared-950: #2c0000;
+
+  /* Easings */
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Animations */
+}
+
+/* Body */
+html,
+body {
+  @apply bg-agray-950 mx-auto;
+
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  overflow-x: hidden;
+}
+
+/* Text */
+p.regular {
+  @apply text-agray-300 text-md lg:text-lg;
+}
+
+/* Custom scrollbar styling */
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #555 #222; /* Thumb and track colors */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #555; /* Color of the thumb */
+  border-radius: 10px; /* Round the thumb edges */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Color when hovered */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #222; /* Color of the track */
+}
